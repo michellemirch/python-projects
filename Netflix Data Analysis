@@ -1,4 +1,4 @@
-#Create a DataFrame from scratch
+# Objective: Create a DataFrame from scratch, to analyze the length of Netflix movies over the years. Hypothesis: Lengths of movies on Netflix are decreasing over time. 
 
 # Create the years and durations lists
 years = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
@@ -9,3 +9,14 @@ movie_dict = {"years":years, "durations": durations}
 
 # Print the dictionary
 print(movie_dict)
+
+# Import pandas under its usual alias
+import pandas as pd
+
+# Create a dataframe
+durations_df = pd.DataFrame(movie_dict)
+
+# Print the DataFrame
+print(durations_df)
+
+# Visualize the data
