@@ -1,22 +1,19 @@
-# Objective: Create a DataFrame from scratch, to analyze the length of Netflix movies over the years. Hypothesis: Lengths of movies on Netflix are decreasing over time. 
+# Objective is to create a DataFrame from scratch, to analyze the length of Netflix movies over the years. 
+import pandas as pd
+import matplotlib.pyplot as plt
 
-# Create the years and durations lists
+# Create the years and durations lists. Create a dictionary with the two lists. Print the dictionary.
 years = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
 durations = [103, 101, 99, 100, 100, 95, 95, 96, 93, 90]
-
-# Create a dictionary with the two lists
 movie_dict = {"years":years, "durations": durations}
-
-# Print the dictionary
 print(movie_dict)
 
-# Import pandas under its usual alias
-import pandas as pd
-
-# Create a dataframe
+# Create a dataframe and print.
 durations_df = pd.DataFrame(movie_dict)
-
-# Print the DataFrame
 print(durations_df)
 
 # Visualize the data
+fig = plt.figure()
+plt.plot(durations_df['years'], durations_df['durations'])
+plt.title("Netflix Movie Durations 2011-2020")
+plt.show
