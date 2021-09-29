@@ -17,3 +17,12 @@ fig = plt.figure()
 plt.plot(durations_df['years'], durations_df['durations'])
 plt.title("Netflix Movie Durations 2011-2020")
 plt.show
+
+#Print first five rows of a new dataframe (extensive data provided by netflix)
+netflix_df = pd.read_csv('datasets/netflix_data.csv')
+print(netflix_df[0:5])
+
+#Select only movies, and print first five rows
+netflix_df_movies_only = netflix_df[netflix_df['type'] == 'Movie']
+netflix_movies_col_subset = netflix_df_movies_only[['title', 'country', 'genre', 'release_year','duration']]
+print(netflix_movies_col_subset[0:5])
